@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Use this type of comment within HTML -->
+        <title>Cat Breeds</title>
+        
+        <!-- External Style -->
+        <link href="style/mystyle.css" rel="stylesheet" type="text/css" /> 
+
+        <!-- this is your internal style sheet -->
+        <style> 
+
+        </style>
+    </head>
+    <body>
+
+        <div id="titleNav">
+
+            <div id="title">
+                Cat Breeds
+            </div>
+
+            <div id="nav">
+                <div class="dropdown">
+                    <a href="#/home">Home</a>
+                </div>
+                <div class="dropdown">
+                    <div class="dropHeader">Account</div>
+                    <div class="dropContent" id="accountDropDown">
+                        <a>Register</a> <br/>
+                        <a>Log In</a> <br/>
+                        <a>Profile</a> <br/>
+                        <a>Log Out</a>
+                    </div> 
+                </div>
+                <div class="dropdown">
+                    <div class="dropHeader">Search</div>
+                    <div class="dropContent" id="searchDropDown">
+                        <a href="#/users">Users</a> <br/>
+                        <a href="#/cars">Cars</a> 
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div class="dropHeader">Tutorial</div>
+                    <div class="dropContent" id="tutorialDropDown">
+                        <a>Proposal</a> <br/>
+                        <a>Marketing</a> <br/>
+                        <a>Demo</a> <br/>
+                        <a>Tutorial</a> <br/>
+                    </div> 
+                </div>          
+                <div class="dropdown">
+                    <a href="#/blog">Blog</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="content">
+            <h2>My Home Page Content</h2>
+
+            <p>
+                There are many types of cat breeds. This web page will provide information about some of the most popular breeds to all the cat lovers out there!
+            </p>
+
+            <p>
+                Specifically, Purina recognizes 45 cat breeds. Click <a href="https://www.purina.com/cats/cat-breeds?page=3">here</a> to see their list. You can select filters to find certain breeds and read all about them.
+            </p>
+
+            <p style="text-align:center;">
+                <img src="pics/1800x1200_cat_weight_other.jpg" class="stopFloat" style="width:50%; border-radius:10px;">
+            </p>
+
+        </div> <!-- content. [[Keep track of nesting]] -->
+        <div id="footer">
+            Meghan Beck
+        </div>
+
+        <script src="js/dropdownFw.js"></script>
+        <script>
+            "use strict";
+            dropdownFw("dropHeader", "dropContent", "-500px");
+        </script>
+    </body>
+</html>
