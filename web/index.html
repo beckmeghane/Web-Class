@@ -3,7 +3,7 @@
     <head>
 
         <!-- Use this type of comment within HTML -->
-        <title>Cat Breeds</title>
+        <title>Ski Resorts</title>
         
         <!-- External Style -->
         <link href="style/mystyle.css" rel="stylesheet" type="text/css" /> 
@@ -18,7 +18,7 @@
         <div id="titleNav">
 
             <div id="title">
-                Cat Breeds
+                Ski Resorts
             </div>
 
             <div id="nav">
@@ -57,19 +57,19 @@
 
         </div>
 
-        <div id="content">
+        <div id="view">
             <h2>My Home Page Content</h2>
 
             <p>
-                There are many types of cat breeds. This web page will provide information about some of the most popular breeds to all the cat lovers out there!
+                Skiing is popular all across the globe, and there are ski resorts everywhere! This web page will provide information about some of the most popular resorts to all the skiers and boarders out there. You can also buy lift tickets to your favorite resorts here.
             </p>
 
             <p>
-                Specifically, Purina recognizes 45 cat breeds. Click <a href="https://www.purina.com/cats/cat-breeds?page=3">here</a> to see their list. You can select filters to find certain breeds and read all about them.
+                Click <a href="https://www.skimag.com/ski-resort-life">here</a> to see SKI Magazine's comprehensive guide to ski resort life in the United States. You can browse through Eastern, Western, and even editor's choice resorts!
             </p>
 
             <p style="text-align:center;">
-                <img src="pics/1800x1200_cat_weight_other.jpg" class="stopFloat" style="width:50%; border-radius:10px;">
+                <img src="pics/skier.jpg" class="stopFloat" style="width:50%; border-radius:10px;">
             </p>
 
         </div> <!-- content. [[Keep track of nesting]] -->
@@ -78,9 +78,31 @@
         </div>
 
         <script src="js/dropdownFw.js"></script>
+        <script src="js/routeFw.js"></script>
+        <script src="js/components/blog.js"></script>
+        <script src="js/components/home.js"></script>
+        
         <script>
             "use strict";
             dropdownFw("dropHeader", "dropContent", "-500px");
+        </script>
+        
+        <script>
+            
+            "use strict";
+            
+            var myRoutes = [];
+            
+            myRoutes['#/'] = home;
+            myRoutes['#/blog'] = blog;
+            myRoutes['#/home'] = home;
+            
+            var myRouteFw = routeFw({
+                routeArray: myRoutes,
+                contentId: "view"
+            })
+            
+            myRouteFw.printRoutes();
         </script>
     </body>
 </html>
