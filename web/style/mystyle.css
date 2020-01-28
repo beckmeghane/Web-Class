@@ -124,6 +124,14 @@
     .stopFloat{
         clear: both
     }
+    
+    .blogPost{
+        background-color: #D3E2ED;
+        border-radius: 25px;
+        border:2px solid #3B719B;
+        padding: 6px;
+        margin: 18px 0px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -241,5 +249,13 @@
 
     .stopFloat{
         clear: both
+    }
+    
+    .blogPost{
+        background-color: #D3E2ED;
+        border-radius: 25px;
+        border:2px solid #3B719B;
+        padding: 6px;
+        margin: 18px 0px;
     }
 }
