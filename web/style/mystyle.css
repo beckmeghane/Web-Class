@@ -1,5 +1,5 @@
-@media screen and (min-width: 700px){
 
+@media screen and (min-width: 700px) {
     html, body {  
         margin:0; 
         padding:0; 
@@ -30,6 +30,9 @@
         font-family: serif; 
         font-weight: bold;
 
+        display: inline-block;
+        white-space: nowrap;
+
     }
 
     #title { /* no change */
@@ -37,6 +40,8 @@
         padding-bottom: 0px;
         font-size:48px;
         letter-spacing: 1.5px; /* spaces out letters a bit */
+
+        float:left;
     }
 
     #nav { /* fix the nav bar */
@@ -50,6 +55,8 @@
         padding-top:32px;
 
         padding-right: 12px;
+
+        float:right;
 
     }
 
@@ -78,7 +85,7 @@
         text-align:center;
         padding:8px;	 	 
     }
-    .dropHeader {
+    .dropHeader{
 
     }
 
@@ -124,7 +131,7 @@
     .stopFloat{
         clear: both
     }
-    
+
     .blogPost{
         background-color: #D3E2ED;
         border-radius: 25px;
@@ -135,7 +142,7 @@
 }
 
 @media screen and (max-width: 700px) {
-     html, body {  
+    html, body {  
         margin:0; 
         padding:0; 
     }
@@ -165,17 +172,35 @@
         font-family: serif; 
         font-weight: bold;
 
+        display: inline-block;
+        white-space: nowrap;
+
     }
 
     #title { /* no change */
-        padding:12px;
-        padding-bottom: 0px;
+        padding-top: 12px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 6px;
         font-size:48px;
         letter-spacing: 1.5px; /* spaces out letters a bit */
+
+        float:left;
     }
 
     #nav { /* fix the nav bar */
-        display:none;
+        /*    position: fixed; 
+            top: 0px;
+            right: 0px;*/
+        text-align:right;
+        font-size:24px;
+        /*    padding-bottom: 12px;
+        
+            padding-top:32px;*/
+
+        padding-right: 12px;
+
+        float:right;
 
     }
 
@@ -188,7 +213,7 @@
     #view {  /* Added padding top and bottom to prevent top/bottom content from getting hidden under titleNav/footer */ 
 
         padding:12px;
-        padding-top: 80px; /* prevent the top of the content from getting hidden under the fixed titleNav */
+        padding-top: 100px; /* prevent the top of the content from getting hidden under the fixed titleNav */
         padding-bottom: 40px; /* prevent the the bottom of the content from getting hidden under the fixed footer */
     }
 
@@ -250,7 +275,7 @@
     .stopFloat{
         clear: both
     }
-    
+
     .blogPost{
         background-color: #D3E2ED;
         border-radius: 25px;

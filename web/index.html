@@ -7,10 +7,13 @@
         
         <!-- External Style -->
         <link href="style/mystyle.css" rel="stylesheet" type="text/css" /> 
+        <link href="style/clickSort.css" rel="stylesheet" type="text/css" /> 
 
         <!-- this is your internal style sheet -->
-        <style> 
-
+        <style>
+            .dropdown:hover {
+                background-color: #3d6b8e;
+            }
         </style>
     </head>
     <body>
@@ -21,7 +24,7 @@
                 Ski Resorts
             </div>
 
-            <div id="nav">
+            <div id="nav" style="white-space: nowrap; display: inline-block;">
                 <div class="dropdown">
                     <a href="#/home">Home</a>
                 </div>
@@ -38,7 +41,7 @@
                     <div class="dropHeader">Search</div>
                     <div class="dropContent" id="searchDropDown">
                         <a href="#/users">Users</a> <br/>
-                        <a href="#/cars">Cars</a> 
+                        <a href="#/resorts">Resorts</a> 
                     </div>
                 </div>
                 <div class="dropdown">
@@ -76,11 +79,15 @@
         <div id="footer">
             Meghan Beck
         </div>
-
+        
+        <script src="js/MakeUpDownSortableTable.js"></script>
+        <script src="js/ajax.js"></script> 
         <script src="js/dropdownFw.js"></script>
         <script src="js/routeFw.js"></script>
         <script src="js/components/blog.js"></script>
         <script src="js/components/home.js"></script>
+        <script src="js/components/users.js"></script>
+        <script src="js/components/resorts.js"></script>
         
         <script>
             "use strict";
@@ -96,11 +103,13 @@
             myRoutes['#/'] = home;
             myRoutes['#/blog'] = blog;
             myRoutes['#/home'] = home;
+            myRoutes['#/users'] = users;
+            myRoutes['#/resorts'] = resorts;
             
             var myRouteFw = routeFw({
                 routeArray: myRoutes,
                 contentId: "view"
-            })
+            });
             
             myRouteFw.printRoutes();
         </script>

@@ -1,0 +1,62 @@
+[
+    {
+        "resortId": "1",
+        "resortName": "Stowe",
+        "ticketPrice": "$96.50",
+        "image": "https://img1.onthesnow.com/image/xl/76/76338.jpg",
+        "visitDate": "01/13/2020",
+        "ticketNumber": "1",
+        "webUserId": "2",
+        "description": "one ticket for Lester Adams",
+        "userEmail": "skilife4ever@skilife.com",
+        "birthday": "12/09/1997"
+    },
+    {
+        "resortId": "2",
+        "resortName": "Killington",
+        "ticketPrice": "124.00",
+        "image": "https://www.worldsnowboardguide.com/asset/58E372B1-E185-4431-A10DD741717252EE/",
+        "visitDate": "12/25/2019",
+        "ticketNumber": "3",
+        "webUserId": "1",
+        "description": "one ticket for Meghan Beck",
+        "userEmail": "1998mego@gmail.com",
+        "birthday": "11/09/1998"
+    },
+    {
+        "resortId": "10",
+        "resortName": "Wisp",
+        "ticketPrice": "$59.99",
+        "image": "https://deepcreek.com/wp-content/uploads/2015/01/1mini1.jpg",
+        "visitDate": "01/31/2020",
+        "ticketNumber": "5",
+        "webUserId": "3",
+        "description": "one ticket for Tommy Carter",
+        "userEmail": "tommy.carter@tommydomain.org",
+        "birthday": "07/22/1996"
+    },
+    {
+        "resortId": "5",
+        "resortName": "Vail",
+        "ticketPrice": "$89.99",
+        "image": "https://cdn.summitdaily.com/wp-content/uploads/sites/2/2019/02/MaySkiing-SDN-013019-1.jpg",
+        "visitDate": "02/11/2020",
+        "ticketNumber": "2",
+        "webUserId": "4",
+        "description": "one ticket for Sharpay Evans",
+        "userEmail": "ilovecats4563@catlovers.com",
+        "birthday": "06/11/1998"
+    },
+    {
+        "resortId": "4",
+        "resortName": "Blue Mountain",
+        "ticketPrice": "$40.00",
+        "image": "https://i.pinimg.com/originals/06/a3/0a/06a30a0d690fe65f6f82320a8cd58e8c.jpg",
+        "visitDate": "12/29/2020",
+        "ticketNumber": "4",
+        "webUserId": "5",
+        "description": "one ticket for Kate Gillan",
+        "userEmail": "kate.gillan@aim.com",
+        "birthday": "01/01/1992"
+    }
+]
