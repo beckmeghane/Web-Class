@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Proof of Concept</title>
+        <link href="../style/mystyle.css" rel="stylesheet" type="text/css" /> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="titleNav">
+
+            <div id="title">
+                Proof of Concept
+            </div>
+
+        </div>
+        <div id="view">
+
+            <div class="blogPost">
+                <h2>JS for slideshow gallery</h2>
+                var slideIndex = 1;<br>
+                showSlides(slideIndex);<br>
+                <br>
+                // Next/previous controls<br>
+                function plusSlides(n) {<br>
+                &emsp;showSlides(slideIndex += n);<br>
+                }<br>
+                <br>
+                // Thumbnail image controls<br>
+                function currentSlide(n) {<br>
+                &emsp;showSlides(slideIndex = n);<br>
+                }<br>
+                <br>
+                function showSlides(n) {<br>
+                &emsp;var i;<br>
+                &emsp;var slides = document.getElementsByClassName("mySlides");<br>
+                &emsp;var dots = document.getElementsByClassName("demo");<br>
+                &emsp;var captionText = document.getElementById("caption");<br>
+                &emsp;if (n > slides.length) {slideIndex = 1}<br>
+                &emsp;if (n < 1) {slideIndex = slides.length}<br>
+                &emsp;for (i = 0; i < slides.length; i++) {<br>
+                &emsp;&emsp;slides[i].style.display = "none";<br>
+                &emsp;}<br>
+                &emsp;for (i = 0; i < dots.length; i++) {<br>
+                &emsp;&emsp;dots[i].className = dots[i].className.replace(" active", "");<br>
+                &emsp;}<br>
+                &emsp;slides[slideIndex-1].style.display = "block";<br>
+                &emsp;dots[slideIndex-1].className += " active";<br>
+                &emsp;captionText.innerHTML = dots[slideIndex-1].alt;<br>
+                }<br>
+                <br>
+            </div>
+
+            <div class="blogPost">
+                <h2>HTML for slideshow gallery</h2>
+                &lt;div class="container"><br>
+                <br>
+                <!-- Full-width images with number text --><br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">1 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;img src="img_woods_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">2 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;img src="img_5terre_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">3 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;mg src="img_mountains_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">4 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;img src="img_lights_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">5 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;img src="img_nature_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="mySlides"><br>
+                &emsp;&emsp;&lt;div class="numbertext">6 / 6&lt;/div><br>
+                &emsp;&emsp;&emsp;&lt;img src="img_snow_wide.jpg" style="width:100%"><br>
+                &emsp;&lt;/div><br>
+                <br>
+                <!-- Next and previous buttons --><br>
+                &emsp;&lt;a class="prev" onclick="plusSlides(-1)">&#10094;&lt;/a><br>
+                &emsp;&lt;a class="next" onclick="plusSlides(1)">&#10095;&lt;/a><br>
+                <br>
+                <!-- Image text --><br>
+                &emsp;&lt;div class="caption-container"><br>
+                &emsp;&emsp;&lt;p id="caption">&lt;/p><br>
+                &emsp;&lt;/div><br>
+                <br>
+                <!-- Thumbnail images --><br>
+                &emsp;&lt;div class="row"><br>
+                &emsp;&emsp;&lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&emsp;&lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&emsp;&lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&emsp;lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&emsp;&lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&emsp;&lt;div class="column"><br>
+                &emsp;&emsp;&emsp;&lt;img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains"><br>
+                &emsp;&emsp;&lt;/div><br>
+                &emsp;&lt;/div><br>
+                &lt;/div>
+            </div>
+
+            <div class="blogPost">
+                <h2>JavaScript for Modal Box</h2>
+                var modal = document.getElementById("myModal");<br>
+                <br>
+                // Get the button that opens the modal<br>
+                var btn = document.getElementById("myBtn");<br>
+                <br>
+                // Get the &lt;span> element that closes the modal<br>
+                var span = document.getElementsByClassName("close")[0];<br>
+                <br>
+                // When the user clicks on the button, open the modal<br>
+                btn.onclick = function() {<br>
+                &emsp;modal.style.display = "block";<br>
+                }<br>
+                <br>
+                // When the user clicks on &lt;span> (x), close the modal<br>
+                span.onclick = function() {<br>
+                &emsp;modal.style.display = "none";<br>
+                }<br>
+                <br>
+                // When the user clicks anywhere outside of the modal, close it<br>
+                window.onclick = function(event) {<br>
+                &emsp;if (event.target == modal) {<br>
+                &emsp;&emsp;modal.style.display = "none";<br>
+                &emsp;}<br>
+                }
+            </div>
+
+            <div class="blogPost">
+                <h2>HMTL for Modal Box</h2>
+                &lt;button id="myBtn">Open Modal&lt;/button><br>
+                <br>
+                <!-- The Modal --><br>
+                &lt;div id="myModal" class="modal"><br>
+                <br>
+                <!-- Modal content --><br>
+                &emsp;&lt;div class="modal-content"><br>
+                &emsp;&emsp;&lt;span class="close">&times;&lt;/span><br>
+                &emsp;&emsp;&lt;p>Some text in the Modal..&lt;/p><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &lt;/div>
+            </div>
+
+            <div class="blogPost">
+                <h2>HTML for Register Form</h2>
+                &lt;form action="action_page.php"><br>
+                &emsp;&lt;div class="container"><br>
+                &emsp;&emsp;&lt;h1>Register&lt;/h1><br>
+                &emsp;&emsp;&lt;p>Please fill in this form to create an account.&lt;/p><br>
+                &emsp;&emsp;&lt;hr><br>
+                <br>
+                &emsp;&emsp;&lt;label for="email">&lt;b>Email&lt;/b>&lt;/label><br>
+                &emsp;&emsp;&lt;input type="text" placeholder="Enter Email" name="email" required><br>
+                <br>
+                &emsp;&emsp;&lt;label for="psw">&lt;b>Password&lt;/b>&lt;/label><br>
+                &emsp;&emsp;&lt;input type="password" placeholder="Enter Password" name="psw" required><br>
+                <br>
+                &emsp;&emsp;&lt;label for="psw-repeat">&lt;b>Repeat Password&lt;/b>&lt;/label><br>
+                &emsp;&emsp;&lt;input type="password" placeholder="Repeat Password" name="psw-repeat" required><br>
+                &emsp;&emsp;&lt;hr><br>
+                <br>
+                &emsp;&emsp;&lt;p>By creating an account you agree to our &lt;a href="#">Terms & Privacy&lt;/a>.&lt;/p><br>
+                &emsp;&emsp;&lt;button type="submit" class="registerbtn">Register&lt;/button><br>
+                &emsp;&lt;/div><br>
+                <br>
+                &emsp;&lt;div class="container signin"><br>
+                &emsp;&emsp;&lt;p>Already have an account? &lt;a href="#">Sign in&lt;/a>.&lt;/p><br>
+                &emsp;&lt;/div><br>
+                &lt;/form>
+            </div>
+            
+            <div class="blogPost">
+                <a href="poc.pdf">Link to pdf of code for better viewing</a>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            Meghan Beck
+        </div>
+
+    </body>
+</html>

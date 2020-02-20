@@ -4,7 +4,7 @@
 
         <!-- Use this type of comment within HTML -->
         <title>Ski Resorts</title>
-        
+
         <!-- External Style -->
         <link href="style/mystyle.css" rel="stylesheet" type="text/css" /> 
         <link href="style/clickSort.css" rel="stylesheet" type="text/css" /> 
@@ -41,13 +41,15 @@
                     <div class="dropHeader">Search</div>
                     <div class="dropContent" id="searchDropDown">
                         <a href="#/users">Users</a> <br/>
-                        <a href="#/resorts">Resorts</a> 
+                        <a href="#/resorts">Resorts</a> <br/>
+                        <a href="#/slideshow">Slide Show</a>
                     </div>
                 </div>
                 <div class="dropdown">
                     <div class="dropHeader">Tutorial</div>
                     <div class="dropContent" id="tutorialDropDown">
-                        <a>Proposal</a> <br/>
+                        <a href="tutorial/proposal.pdf">Proposal</a> <br/>
+                        <a href="tutorial/poc.html">POC</a> <br/>
                         <a>Marketing</a> <br/>
                         <a>Demo</a> <br/>
                         <a>Tutorial</a> <br/>
@@ -79,7 +81,12 @@
         <div id="footer">
             Meghan Beck
         </div>
-        
+
+        <script src="tutorial/poc.html"></script>
+        <script src="tutorial/poc.pdf"></script>
+        <script src="tutorial/proposal.pdf"></script>
+        <script src="js/ajax3.js"></script>
+        <script src="js/MakeSlideShow.js"></script>
         <script src="js/MakeUpDownSortableTable.js"></script>
         <script src="js/ajax.js"></script> 
         <script src="js/dropdownFw.js"></script>
@@ -88,29 +95,31 @@
         <script src="js/components/home.js"></script>
         <script src="js/components/users.js"></script>
         <script src="js/components/resorts.js"></script>
-        
+        <script src="js/components/slideshow.js"></script>
+
         <script>
-            "use strict";
-            dropdownFw("dropHeader", "dropContent", "-500px");
+                    "use strict";
+                    dropdownFw("dropHeader", "dropContent", "-500px");
         </script>
-        
+
         <script>
-            
+
             "use strict";
-            
+
             var myRoutes = [];
-            
+
             myRoutes['#/'] = home;
             myRoutes['#/blog'] = blog;
             myRoutes['#/home'] = home;
             myRoutes['#/users'] = users;
             myRoutes['#/resorts'] = resorts;
-            
+            myRoutes['#/slideshow'] = slideshow;
+
             var myRouteFw = routeFw({
                 routeArray: myRoutes,
                 contentId: "view"
             });
-            
+
             myRouteFw.printRoutes();
         </script>
     </body>

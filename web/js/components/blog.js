@@ -30,6 +30,20 @@ function blog(id) {
                 I worked on this homework for a long time. I found it easy to hard-code 5 of my database entries, incorporate a filterable table and sortable table with my JSON data, and add extra routing pages to my web page. I had difficulty trying to combine the two functionality of the two table types. At first, I couldn't get the "filter by" and input box to show up even though it was in the code. Then, I wasn't able to filter the table after it had been click-sorted. I was finally able to get this to work, but it took a long time.
             </p>
         </div>
+    
+        <div class="blogPost">
+            <h2>Blog 4: JS Slideshow</h2>
+            <p>
+                It was easy to incorporate the two slideshows next to each other with captions since I had already done this in lab. I did find it difficult to invoke the public method because of the way the html content is injected to the view. I finally was able to get it to work with providing the "change caption" button with an onclick event in the JS code rather than in the html tag.
+            </p>
+        </div>
+    
+        <div class="blogPost">
+            <h2><a href="tutorial/proposal.pdf">Blog 4: Tutorial Proposal</a></h2>
+            <p>
+                It was very easy to explain my proposed component's functionality and type up the pdf. It was also easy to copy and paste proof of concept code from W3Schools, but it was very time-consuming and tedious to make sure the html text shows correctly in the HTML file with the lt and nbsp tags.'
+            </p>
+        </div>
     `;
     document.getElementById(id).innerHTML = content;
 }
