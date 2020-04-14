@@ -34,18 +34,19 @@ function slideshow(id) {
     var ss2;
 
     ajax3({
-        url: "json/allWebUsers.json",
+        url: "webAPIs/listUsersAPI.jsp",
         successFn: success,
         errorEle: document.getElementById("slideId")
     });
 
     ajax3({
-        url: "json/allResorts.json",
+        url: "webAPIs/listResortsAPI.jsp",
         successFn: success2,
         errorEle: document.getElementById("slideId2")
     });
 
     function success(userList) {
+        userList = userList.webUserList;
         console.log(userList);
 
         ss = MakeSlideShow({
@@ -59,6 +60,7 @@ function slideshow(id) {
     }
 
     function success2(resortList) {
+        resortList = resortList.resortList;
         console.log(resortList);
 
         ss2 = MakeSlideShow({

@@ -30,8 +30,10 @@ function ajax(url, callBackSuccess, errorId) {
                 var jsonData = httpReq.responseText;
                 console.log("jsonData read: " + jsonData);
                 var jsObj = JSON.parse(jsonData);
+                console.log("we parse");
                 // invoke the HTML coder's function, passing in the JS object converted from the JSON data
                 callBackSuccess(jsObj);
+                console.log("callback SUCCESS");
             } else {
                 // First use of property creates new (custom) property
                 document.getElementById(errorId).innerHTML = "Error (" + httpReq.status + " " + httpReq.statusText +

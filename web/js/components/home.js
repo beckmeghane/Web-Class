@@ -2,7 +2,7 @@ function home(id) {
 
     // ` this is a "back tick". Use it to define multi-line strings in JavaScript.
     var content = `
-        <h2>My Home Page Content</h2>
+        <h2>Most Popular Resorts in the US</h2>
 
         <p>
             Skiing is popular all across the globe, and there are ski resorts everywhere! This web page will provide information about some of the most popular resorts to all the skiers and boarders out there. You can also buy lift tickets to your favorite resorts here.

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tutorial Demo</title>
+        <link href="RegisterGallery.css" rel="stylesheet" type="text/css" /> 
+<!--        <link href="../../style/mystyle.css" rel="stylesheet" type="text/css" />-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #BECBD4;">
+        
+        <div id="demoHere" style="float: left;"></div>
+        
+        <div id="demo2Here" style="float: left;"></div>
+        
+        
+
+        <script src="MakeRegisterGallery.js"></script>
+        <script src="../../js/ajax3.js"></script>
+        <script src="../../js/ajax.js"></script>
+        <script src="../../webAPIs/listResortsAPI.jsp"></script>
+        <script src="../../webAPIs/insertResortAPI.jsp"></script>
+        
+
+        <script>
+
+                            "use strict";
+                            var gallery;
+                            var gallery2;
+                            
+                            ajax3({
+                                url: "../../webAPIs/listResortsAPI.jsp",
+                                successFn: success,
+                                errorEle: document.getElementById("demoHere")
+                            });
+
+                            function success(resortList) {
+                                resortList = resortList.resortList;
+                                console.log(resortList);
+
+                                gallery = MakeRegisterGallery({
+                                    id: "demoHere", // id in which to render slideshow,
+                                    list: resortList
+                                });
+                                
+                                gallery.setPicNum(3);
+                            }
+                            
+                            ajax3({
+                                url: "../../webAPIs/listResortsAPI.jsp",
+                                successFn: success2,
+                                errorEle: document.getElementById("demo2Here")
+                            });
+
+                            function success2(resortList) {
+                                resortList = resortList.resortList;
+                                console.log(resortList);
+
+                                gallery2 = MakeRegisterGallery({
+                                    id: "demo2Here", // id in which to render slideshow,
+                                    list: resortList
+                                });
+                                
+                                gallery2.setPicNum(1);
+                            }
+                            
+//                            gallery2.setPicNum(1);
+        </script>
+    </body>
+</html>

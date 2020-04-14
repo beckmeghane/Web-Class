@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tutorial Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: #BECBD4;">
+        <div style ="padding:12px; padding-bottom: 0px; font-size:48px; letter-spacing: 1.5px; position:fixed; top:0px; left:0px; z-index: 1; width: 100%; background-color:#214D70; padding-bottom: 10px;color: white; font-family: serif; font-weight: bold;">
+            Tutorial Demo
+        </div>
+
+        <div style="padding:12px; padding-top: 80px; padding-bottom: 40px;">
+            <div>
+            <p>I developed a component that combines functionality of a slideshow gallery, a modal box, and a register form. The JS function uses a parameters object with the following fields: </p>
+            <ul>
+                <li><b>id</b>: the id of the div that the function inserts the component into</li>
+                <li><b>list</b>: the list that the component uses to display images and captions</li>
+            </ul>
+            <p>The JS function creates a component where the user can see a large picture with its corresponding caption. Below, there are smaller, less opaque images that are populated from the list parameter. When a user clicks on a smaller picture, that image and caption are displayed where the large image is. The user can also navigate to the next or previous images in the list with corresponding arrows. When a user clicked on the larger image, a modal will pop up with a form to purchase a ticket to that resort. For example, if the larger picture is a picture of the ski resort, Wisp, a modal will pop up prompting the user to purchase a ticket to Wisp.</p>
+            <div>
+                <h2><a href="download/demo.html">Demo Link</a></h2>
+
+            </div>
+            <hr>
+
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/code6.png">
+                <p>This is where the component gets the id of the DOM element it will be filling. I also takes the list that was passed in and deletes each JSON object that does not have a value in its image field.</p>
+            </div>
+
+            <hr>
+            
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/realcode1.png">
+                <p>Here, I create HTML DOM elements for and set the larger image and its caption.</p>
+            </div>
+
+            <hr>
+            
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/realcode8.png">
+                <p>Here, I create HTML DOM elements for each of the smaller images and handle the change of the larger image and caption if a user clicks on one of the smaller pictures.</p>
+            </div>
+
+            <hr>
+
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/realcode2.png">
+                <p>Here, I create HTML DOM elements for the form within the modal. It shows the first input element in the form, as well. </p>
+            </div>
+
+            <hr>
+
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/code3.png">
+                <p>This code shows what happens when the user clicks on the larger picture. It opens up the modal with the form by setting the display style value of the modal. If the user clicks outside of the modal, the display value will be set back to none.</p>
+            </div>
+
+            <hr>
+
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/code4.png">
+                <p>This code shows what happens if the user clicks on the left and right buttons. It makes sure the index is in bounds and updates the values rendered in the HTML.</p>
+            </div>
+
+            <hr>
+            
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/realcode7.png">
+                <p>This is the public method that allows a user to set the larger picture to a number of their choice outside of this function. </p>
+            </div>
+
+            <hr>
+            
+            <div style="padding: 20px;">
+                <img style="border: solid black" src="../pics/realcode9.png">
+                <p>This method makes an AJAX call to my insertResortAPI and inserts the information entered by the user in the modal form into my resorts table.</p>
+            </div>
+
+            <hr>
+
+            
+
+        </div>
+
+        <div>
+            <h2><a href="download.zip">Download the zip file of my demo here</a></h2>
+
+        </div>
+
+        <div style="">
+            <h3>Proposal Links</h3>
+            <p><a href="proposal.pdf">Link to Proposal </a></p>
+            <p><a href="poc.html">Link to Proof of Concept </a></p>
+        </div>
+
+        <div>
+            <h3>Reference Links</h3>
+            <p><a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp">Link to Slideshow Gallery inspiration </a></p>
+            <p><a href="https://www.w3schools.com/howto/howto_css_modals.asp">Link to Modal Box inspiration </a></p>
+            <p><a href="https://www.w3schools.com/howto/howto_css_register_form.asp">Link to Register Form inspiration </a></p>
+
+        </div>
+    </div>
+    
+        <div style="position: fixed; bottom: 0px; left: 0px; z-index: 1; background-color:#214D70;color: white; width:100%; text-align:center; padding:8px;">
+            Meghan Beck
+        </div>
+
+        <script src="proposal.pdf"></script>
+        <script src="poc.html"></script>
+        <script src="poc.pdf"></script>
+        <script src="download/demo.html"></script>
+        <script src="download/MakeRegisterGallery.js"></script>
+        <script src="download.zip"></script>
+
+        <script>
+
+        </script>
+
+    </body>
+
+
+</html>

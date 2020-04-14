@@ -31,10 +31,10 @@
                 <div class="dropdown">
                     <div class="dropHeader">Account</div>
                     <div class="dropContent" id="accountDropDown">
-                        <a>Register</a> <br/>
-                        <a>Log In</a> <br/>
-                        <a>Profile</a> <br/>
-                        <a>Log Out</a>
+                        <a href="#/insertUser">Register</a> <br/>
+                        <a href="#/logon">Log In</a> <br/>
+                        <a href="#/getProfile">Profile</a> <br/>
+                        <a href="#/logoff">Log Out</a>
                     </div> 
                 </div>
                 <div class="dropdown">
@@ -50,9 +50,8 @@
                     <div class="dropContent" id="tutorialDropDown">
                         <a href="tutorial/proposal.pdf">Proposal</a> <br/>
                         <a href="tutorial/poc.html">POC</a> <br/>
-                        <a>Marketing</a> <br/>
-                        <a>Demo</a> <br/>
-                        <a>Tutorial</a> <br/>
+                        <a href="tutorial/index.html">Tutorial</a> <br/>
+                        <a href="tutorial/download/demo.html">Demo</a> <br/>
                     </div> 
                 </div>          
                 <div class="dropdown">
@@ -63,7 +62,7 @@
         </div>
 
         <div id="view">
-            <h2>My Home Page Content</h2>
+            <h2>Most Popular Resorts in the US</h2>
 
             <p>
                 Skiing is popular all across the globe, and there are ski resorts everywhere! This web page will provide information about some of the most popular resorts to all the skiers and boarders out there. You can also buy lift tickets to your favorite resorts here.
@@ -82,20 +81,37 @@
             Meghan Beck
         </div>
 
+        
         <script src="tutorial/poc.html"></script>
         <script src="tutorial/poc.pdf"></script>
         <script src="tutorial/proposal.pdf"></script>
+        <script src="tutorial/download/demo.html"></script>
+        <script src="tutorial/index.html"></script>        
+        
         <script src="js/ajax3.js"></script>
         <script src="js/MakeSlideShow.js"></script>
         <script src="js/MakeUpDownSortableTable.js"></script>
         <script src="js/ajax.js"></script> 
+        <script src="js/ajax2.js"></script> 
         <script src="js/dropdownFw.js"></script>
         <script src="js/routeFw.js"></script>
+        <script src="js/Utils.js"></script>
+        
         <script src="js/components/blog.js"></script>
         <script src="js/components/home.js"></script>
         <script src="js/components/users.js"></script>
         <script src="js/components/resorts.js"></script>
         <script src="js/components/slideshow.js"></script>
+        <script src="js/components/logon.js"></script>
+        
+        <script src="webAPIs/logonAPI.jsp"></script>
+        <script src="webAPIs/logoffAPI.jsp"></script>
+        <script src="webAPIs/getProfileAPI.jsp"></script>
+        <script src="webAPIs/insertUserSimpleAPI.jsp"></script>
+        <script src="webAPIs/insertResortAPI.jsp"></script>
+        <script src="webAPIs/listUsersAPI.jsp"></script>
+        <script src="webAPIs/listResortsAPI.jsp"></script>
+        <script src="webAPIs/getRolesAPI.jsp"></script>
 
         <script>
                     "use strict";
@@ -111,9 +127,17 @@
             myRoutes['#/'] = home;
             myRoutes['#/blog'] = blog;
             myRoutes['#/home'] = home;
-            myRoutes['#/users'] = users;
-            myRoutes['#/resorts'] = resorts;
+            myRoutes['#/users'] = users.list;
+            myRoutes['#/resorts'] = resorts.list;
             myRoutes['#/slideshow'] = slideshow;
+            myRoutes['#/logon'] = logon.UI;
+            myRoutes['#/logoff'] = logon.loggedOffMsg;
+            myRoutes['#/getProfile'] = logon.getProfileMsg;
+            myRoutes['#/insertUser'] = users.insertUser;
+            myRoutes['#/insertResort'] = resorts.insertResort;
+            myRoutes['#/userUpdate'] = function () {};
+            myRoutes['#/resortUpdate'] = function () {};
+           
 
             var myRouteFw = routeFw({
                 routeArray: myRoutes,
